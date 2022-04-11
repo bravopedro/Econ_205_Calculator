@@ -10,9 +10,22 @@ print("5 Calculate the IsoQuant")
 print("6 Constant decreasing increasing returns to scale")
 print("7 Solve for L or K")
 print("8 Find the production function")
-print("9 MRTS")
+print("9 Marginal Rate Of Technical Substitution")
 print("10 Solve for the supply curve ")
 print("12 Cost Function")
+print("13 Long run equilibrium number of firms")
+print("14 Find the competitive equilibrium price")
+print("15 Price after Tax")
+print("16 Dead Weight Loss")
+print("17 Producer Surplus")
+print("18 Consumer Surplus")
+print("19 Total Welfare")
+print("20 Pareto effect or no")
+print("21 Marginal utility of a ")
+print("22 Marginal utility of b ")
+print("23 Optimal Choice")
+
+
 print("REMINDER Always Remember to type ot ex.) 3x^2 = 3*x**2 (Use decimals not fractions)")
 choice = input("ENTER CHOICE NUM ")
 
@@ -130,68 +143,23 @@ if choice == 11:
     print(costFunc)
 
 if choice == 12:
-    # find max vc avialable to spend  and still be profit maximizing
+    # find max vc available to spend  and still be profit maximizing
     r =input("What is R")
     f = input("What is F")
     print(r ,' is the maximum cost because you cant spend more than you earn')
 
 if choice == 13:
-    q = symbols('q')
+    #3 given a cost function give the long run equilibrium number of firms
+    q = symbols('q') # everytime q is mentioned in the input it will be viewed as a symbol
     costFunction = input("Enter the Cost Function")
     numFirms = input("Enter the number of firms available")
-    differntial = costFunction.diff('q')
-    differntial = str(differntial)
-    divByQ = costFunction / q
+    deriv = costFunction.diff('q') # takes the derivative of the cost function
+    deriv = str(deriv) #
+    divByQ = costFunction / q # divides the cost function by q
     divByQ = str(divByQ)
-    total = str(differntial + " = " + divByQ)
+    total = deriv + " = " + divByQ # this is where I get stcuk I cannot set them equal to
+                                    # each other and solve for q
     print(total)
-    print("to complete solve for q and plug into the mariginl cost")
-    # sol = solve(total, q)
-    # print(sol)
-    # solve for q and then plug into differential
-
-if choice == 14:
-    #3 given a cost function give the long run equilibrium number of firms
-    q = symbols('q')
-    costFunction = input("Enter the Cost Function")
-    differntial = costFunction.diff('q')
-    differntial = str(differntial)
-    divByQ = costFunction / q
-    divByQ = str(divByQ)
-    total = str(differntial + " = " + divByQ)
-    print(total)
-
-if choice == 15:
-    # price after taxes
-
-if choice 16:
-    # demand after taxes
-
-
-if choice == 17:
-    # remain or not
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
